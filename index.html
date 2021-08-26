@@ -1,0 +1,128 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+<style>
+    body{
+        font-family: 'Mitr', sans-serif;
+        background-color: rgb(252, 136, 94);
+        font-weight: bold;
+        margin: 50px;
+
+    }
+    .box{
+        margin: auto;
+        width: 600px;
+        background-color:rgb(243, 106, 43);
+        text-align: center;
+    }
+    .box2{
+        margin: auto;
+        width: 600px;
+        height: 400px;
+        background-color:rgb(243, 245, 96);
+        text-align: center;
+        margin-top: -10px;
+    }
+</style>
+<body>
+    <div class="container">
+    <div style="padding-top: 10px; padding-bottom: 10px;" class="box">
+        <h2><b>ผลรางวัลสลากกินแบ่งรัฐบาล</b></h2>
+        <h4>งวดประจำวันที่ 1 กันยายน 2563</h4>
+    </div>
+
+    <div class="box2">
+        <div style="padding-top:30px ;" class="row">
+            <div class="col">
+        รางวัลที่ 1<br>
+        <div style="font-size: 30px;" id="num6">123456</div>
+    </div>
+        </div>
+
+        <div style="padding-top:30px ;" class="row">
+            <div class="col">
+                รางวัลเลขหน้า 3 ตัว<br>
+                <div style="font-size: 30px;" id="num3">123</div>
+              </div>
+              <div class="col">
+                รางวัลท้าย 2 ตัว<br>
+                <div style="font-size: 30px;" id="num2">13</div>
+              </div>
+        </div>
+        <div style="padding-top:30px ;" class="row">
+            <div class="col align-self-start">
+                รางวัลเลขท้าย 3 ตัว<br>
+                <div style="font-size: 30px;" id="num32">123</div>
+              </div>
+              <div class="col">
+
+              </div>
+        </div>
+    </div>
+    <div style="padding-top: 10px; padding-bottom: 10px;" class="box">
+        <button onclick="changesrc()" type="submit" class="btn btn-success" >สุ่มอีกรอบ</button>
+    <script>
+        function changesrc(){
+            let testx = String(Math.floor(Math.random() * 1000000));
+            if (testx.length == 5){
+                testx= "0"+testx    
+                       
+                }
+                if (testx.length == 4){
+                testx= "00"+testx
+                       
+                }
+                if (testx.length == 3){
+                testx= "000"+testx
+                       
+                }
+                if (testx.length == 2){
+                testx= "0000"+testx
+                       
+                }
+                if (testx.length == 1){
+                testx= "00000"+testx
+                       
+                }
+
+            let testx2 = String(Math.floor(Math.random() * 1000));
+            if (testx2.length == 1){
+                       testx2 = "00"+testx2
+                    }
+            if(testx2.length == 2){
+                       testx2 = "0"+testx2
+                    }
+            let testx22 = String(Math.floor(Math.random() * 1000));
+            if (testx22.length == 1){
+                       testx22 = "00"+testx22
+                    }
+            if(testx22.length == 2){
+                       testx22 = "0"+testx22
+                    }
+            let testx3 = String(Math.floor(Math.random() * 100));
+            if (testx3.length == 1){
+                    testx3 = "0"+testx3;         
+            }
+            document.getElementById("num6").innerHTML = testx;
+            document.getElementById("num2").innerHTML = testx3;
+            document.getElementById("num3").innerHTML = testx2;
+            document.getElementById("num32").innerHTML = testx22;
+
+        }
+        </script>
+    </div>  
+</div>
+    
+</body>
+</html>
